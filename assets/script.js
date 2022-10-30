@@ -14,7 +14,7 @@ function verificar() {
              img.setAttribute('id','foto')
 
         if (fsex[0].checked) {
-            gênero = 'Homem'
+            gênero = 'um <strong>Homem</strong>'
             if (idade >=0 && idade <10){
                 // Criança 
                 img.setAttribute('src','./assets/fotosidade/babymasc.jpg')
@@ -30,7 +30,7 @@ function verificar() {
             }
 
         } else if (fsex[1].checked) {
-            gênero = 'Mulher'
+            gênero = 'uma <strong>Mulher</strong>'
             if (idade >=0 && idade <10){
                 // Criança 
                 img.setAttribute('src','./assets/fotosidade/babyfem.jpg')
@@ -48,7 +48,7 @@ function verificar() {
         }
 
         res.style.textAlign = 'center'
-        res.innerHTML = `Detectamos ${gênero} com ${idade} anos.`
+        res.innerHTML = `Detectamos ${gênero} com <strong>${idade}</strong> anos.`
         res.appendChild(img)
     }
 }
